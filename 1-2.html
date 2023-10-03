@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <!--  삼각형 정의: 가장 작은 두 수의 합이 가장 큰 수 보다 커야함 -->
+    <script>
+      function solution(a, b, c) {
+        let answer = "YES",
+          max;
+        if (a > b && a > c) {
+          // 가장 큰 수가 a이다
+          max = a;
+        } else if (a < b && b > c) {
+          // 가장 큰 수가 b이다
+          max = b;
+        } else if (a < c && b < c) {
+          // 가장 큰 수가 c이다
+          max = c;
+        }
+
+        //  가장 큰수보다 나머지 수의 합이 커야함.
+        if (max === a && max < b + c) {
+          answer;
+        } else if (max === b && max < a + c) {
+          answer;
+        } else if (max === c && max < a + b) {
+          answer;
+        } else {
+          answer = "NO";
+        }
+
+        return answer;
+      }
+
+      console.log(solution(6, 7, 11));
+    </script>
+  </body>
+</html>
