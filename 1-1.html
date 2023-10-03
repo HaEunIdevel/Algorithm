@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>출력결과</title>
+    <!-- 세 수 중 가장 작은 값 -->
+  </head>
+  <body>
+    <script>
+      function solution(a, b, c) {
+        let answer;
+        if (a < b && a < c) {
+          // 가장 작은 수가 a이다
+          answer = a;
+        } else if (a > b && b < c) {
+          // 가장 작은 수가 b이다
+          answer = b;
+        } else if (a > c && b > c) {
+          // 가장 작은 수가 c이다
+          answer = c;
+        }
+
+        return answer;
+      }
+
+      console.log(solution(6, 5, 11));
+    </script>
+  </body>
+</html>
