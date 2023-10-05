@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(n) {
+        let answer;
+        // 1인당 1자루씩. 1다스는 12자루
+        // n 명에게 연필 나눠주려면 몇다스가 필요?
+
+        answer = Math.ceil(n / 12);
+        return answer;
+      }
+
+      console.log(solution(178));
+    </script>
+  </body>
+</html>
