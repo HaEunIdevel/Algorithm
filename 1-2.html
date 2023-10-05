@@ -9,23 +9,22 @@
       function solution(a, b, c) {
         let answer = "YES",
           max;
-        if (a > b && a > c) {
-          // 가장 큰 수가 a이다
-          max = a;
-        } else if (a < b && b > c) {
-          // 가장 큰 수가 b이다
-          max = b;
-        } else if (a < c && b < c) {
-          // 가장 큰 수가 c이다
-          max = c;
-        }
+        // if (a > b && a > c) {
+        //   // 가장 큰 수가 a이다
+        //   max = a;
+        // } else if (a < b && b > c) {
+        //   // 가장 큰 수가 b이다
+        //   max = b;
+        // } else if (a < c && b < c) {
+        //   // 가장 큰 수가 c이다
+        //   max = c;
+        // }
 
+        // 가장 큰수를 뽑는다
+        max = Math.max(a, b, c);
         //  가장 큰수보다 나머지 수의 합이 커야함.
-        if (max === a && max < b + c) {
-          answer;
-        } else if (max === b && max < a + c) {
-          answer;
-        } else if (max === c && max < a + b) {
+        // max가 a,b,c 각각의 경우
+        if (max < b + c && max < a + c && max < a + b) {
           answer;
         } else {
           answer = "NO";
