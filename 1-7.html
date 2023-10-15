@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(day, arr) {
+        let answer = 0;
+        // day와 arr의 각 요소의 두번째자리 숫자가 같은경우를 카운트해 구하기..
+        let c = "";
+
+        // 문자열에 한번에 담아 짝수번째 인덱스의 요소와 day와 같은것 개수출력
+        for (let i = 0; i < arr.length; i++) {
+          // console.log("배열",arr[i]);
+          c += arr[i];
+        }
+
+        for (let j = 0; j < c.length; j++) {
+          // 홀수번째 인덱스의 요소와 day와 같은것 개수출력
+          if (j % 2 === 1 && Number(c[j]) === Number(day)) {
+            answer++;
+          }
+        }
+        return answer;
+      }
+
+      arr = [25, 23, 11, 47, 53, 17, 33];
+      console.log(solution(3, arr));
+    </script>
+  </body>
+</html>
