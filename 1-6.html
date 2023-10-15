@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(arr) {
+        let answer = [];
+        let sum = 0,
+          min = 1000;
+        let result = [];
+
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] % 2 === 1) {
+            sum += arr[i]; // 홀수들의 합
+            result.push(arr[i]);
+            result.sort((a, b) => (a < b ? -1 : 1)); // 오름차순정렬
+            min = result[0];
+          }
+        }
+        answer.push(sum); // 홀수들 합
+        answer.push(min); // 작은수
+        return answer; // 배열리턴
+      }
+
+      arr = [12, 77, 38, 41, 53, 92, 85];
+      console.log(solution(arr));
+    </script>
+  </body>
+</html>
