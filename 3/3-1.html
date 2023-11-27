@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let answer = "YES";
+        s = s.toLowerCase(); //소문자로 변경
+        let revers_str = s.split("").reverse().join("");
+        // console.log(revers_str);
+        for (let i = 0; i < s.length; i++) {
+          if (s[i] != revers_str[i]) {
+            answer = "NO";
+          }
+        }
+        return answer;
+      }
+
+      let str = "gooG";
+      console.log(solution(str));
+    </script>
+  </body>
+</html>
