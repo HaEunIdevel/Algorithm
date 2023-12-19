@@ -6,10 +6,11 @@
   <body>
     <script>
       function solution(str) {
-        let answer = "";
-
         // str에서 숫자만 추출
-        answer = str.replace(/[^0-9]/g, "");
+        // 숫자가 아닌것을 빈문자열로
+        let answer = str.replace(/[^0-9]/g, "");
+
+        // 해당 값을 자연수로 변경
         return parseInt(answer);
       }
 
