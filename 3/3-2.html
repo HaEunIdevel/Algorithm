@@ -8,7 +8,7 @@
       function solution(s) {
         let answer = "YES";
 
-        // 알파벳만 뽑아 하나의 문자열로
+        // 영문자가 아닌것을 빈 문자열로
         let str = s.replaceAll(/[^a-zA-Z]/g, "");
         str = str.toLowerCase(); //소문자로 변경
 
