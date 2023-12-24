@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>가장 짧은 문자거리</title>
+  </head>
+  <body>
+    <script>
+      // 미완료된 풀이입니다
+      function solution(s, t) {
+        // s라는 문자열에서 t라는 문자가 어느 위치에있는지
+        // 각 자리에서의 최소거리
+        let answer = [];
+        let result1 = [];
+        let result2 = [];
+        let p = 1000;
+        let index = [];
+        for (let i = 0; i < s.length; i++) {
+          if (s[i] == t) {
+            console.log("vvv");
+            result1.push(i);
+          } else {
+            // 아니라면 이전과 같은 인덱스값을 넣음
+            console.log("aaa");
+            if (i - 1 == -1) {
+              result1.push(1);
+            } else {
+              result1.push(i - 1);
+            }
+          }
+        }
+        console.log(result1);
+
+        return answer;
+      }
+
+      // 생각되는 풀이: s문자열을 돌면서 t가 있으면 해당 문자열 인덱스를 answer에 넣고,
+      // 아니라면 이전과 같은 인덱스값을 넣음
+
+      let str = "teachermode"; // 10121012210
+      console.log(solution(str, "e"));
+    </script>
+  </body>
+</html>
